@@ -1,0 +1,50 @@
+@import "compass";
+@import "compass/reset";
+
+
+$base-font-size: 24px;
+$base-line-height: 36px;
+$rhythm-unit: "rem";
+$rem-with-px-fallback: true;
+
+@include establish-baseline;
+
+
+.parallax-window {
+    min-height: 1080px;
+    background: transparent;
+    .wrap{
+      margin-top: 100px;
+      text-align: center;
+      width: 1200px;
+      margin: 0 auto;
+      @include leader($lines: 7, $property: padding);
+      p{
+        @include rhythm-margins;
+      }
+      h1{
+        @include adjust-font-size-to(2.074rem);
+      }
+      h2{
+        @include adjust-font-size-to(1.728rem);
+      }
+      h3{
+        @include adjust-font-size-to(1.44rem);
+      }
+      h4{
+        @include adjust-font-size-to(1.2rem);
+      }
+      &.one{
+        text-align: center;
+        color: rgba(255,255,255,.8);
+      }
+      &.two{
+        text-align: left;
+        color: rgba(0, 0, 0, .8);
+      }
+      &.three{
+        text-align: right;
+        color: rgba(255, 255, 255, .8);
+      }
+    }
+}

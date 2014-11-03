@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ParallaxJS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+    <ul id="scene">
+      <li class="layer" data-depth="0.10"><img src="images/one.png" height="100" width="100" alt="Image"></li>
+      <li class="layer" data-depth="0.80"><img src="images/two.png" height="100" width="100" alt="Image"></li>
+      <li class="layer" data-depth="0.20"><img src="images/three.png" height="100" width="100" alt="Image"></li>
+      <li class="layer" data-depth="0.80"><img src="images/four.png" height="100" width="100" alt="Image"></li>
+    </ul>
+
+
+  <!-- Scripts -->
+  <script src="js/parallax.js"></script>
+  <script>
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
+  </script>
+</body>
+</html>
